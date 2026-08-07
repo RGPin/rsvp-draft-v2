@@ -1,8 +1,8 @@
-import { Context, Hono } from "hono";
-import { testController } from "../controllers/indexController";
+import { Hono } from "hono";
+import { getMainPage } from "../controllers/indexController";
 
 const router = new Hono();
 
-router.get("/test", testController);
+router.get("/", getMainPage);
 
 export default router;
