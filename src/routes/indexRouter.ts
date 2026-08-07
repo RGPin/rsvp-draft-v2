@@ -3,6 +3,6 @@ import { testController } from "../controllers/indexController";
 
 const router = new Hono();
 
-router.get("/", testController);
+router.get("/test", testController);
 
 export default router;

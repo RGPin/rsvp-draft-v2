@@ -1,33 +1,47 @@
 import { Context, Hono } from "hono";
 import { Test } from "./components/Test";
-import { neon } from "@neondatabase/serverless";
 import indexRouter from "./routes/indexRouter";
+import { jsxRenderer } from "hono/jsx-renderer";
 
 const app = new Hono();
 
-app.get("/", (c) => {
-  return c.text("Hello Hono!");
-});
+app.use(
+  jsxRenderer(({ children }, c: Context) => {
+    const head = c.get("head");
+    return (
+      <html>
+        <head>
+          <meta charset="UTF-8" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+          <meta name="robots" content="noindex" />
+          {head}
+          <title>Home</title>
+        </head>
+        <body>{children}</body>
+      </html>
+    );
+  }),
+);
 
-app.get("/test", async (c: Context) => {
-  const sql = neon(c.env.DATABASE_URL);
-  const users = await sql`SELECT * FROM invites`;
-
-  return c.html(
-    <html>
-      <body>
-        <h1>Hello Hono, secret: {c.env.MY_VAR}</h1>
-        <Test />
-        <ul>
-          {users?.map((user) => (
-            <li>{user.guest_name}</li>
-          ))}
-        </ul>
-      </body>
-    </html>,
+app.get("/", async (c: Context) => {
+  c.set(
+    "head",
+    <>
+      <link rel="stylesheet" href="/index.css" />
+      <script src="/js/index.js" defer type="module"></script>
+    </>,
+  );
+  return c.render(
+    <>
+      <h1>sljfljf</h1>
+      <Test />
+    </>,
   );
 });
 
-app.route("/api", indexRouter);
+app.route("/", indexRouter);
 
 export default app;
