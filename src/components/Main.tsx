@@ -1,0 +1,600 @@
+export const Main = () => {
+  return (
+    <div class="container">
+      <audio id="bg-music" autoplay loop>
+        <source src="/music.mp3" type="audio/mpeg" />
+      </audio>
+      <div class="nav-container">
+        <div class="nav-actions">
+          <button id="toggle-music-btn">Mute</button>
+          <button>Dark</button>
+        </div>
+        <nav class="nav-bar">
+          <button class="nav-toggle" aria-label="Toggle navigation">
+            ☰
+          </button>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#countdown">Countdown</a>
+            </li>
+            <li class="nav-item">
+              <a href="#timeline">Timeline</a>
+            </li>
+            <li class="nav-item">
+              <a href="#event-details">Event Details</a>
+            </li>
+            <li class="nav-item">
+              <a href="#sponsors">Sponsors</a>
+            </li>
+            <li class="nav-item">
+              <a href="#entourage">Entourage</a>
+            </li>
+            <li class="nav-item">
+              <a href="#gallery">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a href="#love-messages">Love Messages</a>
+            </li>
+            <li class="nav-item">
+              <a href="#rsvp">RSVP</a>
+            </li>
+            <li class="nav-item">
+              <a href="#attire-motif">Attire & Motif</a>
+            </li>
+            <li class="nav-item">
+              <a href="#gift-guide">Gift Guide</a>
+            </li>
+            <li class="nav-item">
+              <a href="#extra-info">Extra Info</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <section class="home" id="home">
+        <div class="home-container">
+          <p class="home-text">Witness our union</p>
+
+          <h1 class="home-heading">
+            <span class="name">Jilver Ryan Tim</span>
+            <span class="ampersand">and</span>
+            <span class="name">Sunshine Gatmen</span>
+          </h1>
+
+          <blockquote class="home-quote">
+            <p>
+              "A marriage is always made up of two people who are prepared to
+              swear that only the other one snores."
+            </p>
+          </blockquote>
+
+          <time datetime="2027-06-26" class="home-date">
+            <span class="home-text">June</span>
+            <div class="home-date-day-container">
+              <hr class="divider" />
+              <span class="day">26</span>
+              <hr class="divider" />
+            </div>
+            <span class="home-text">2027</span>
+          </time>
+
+          <address class="home-location">
+            <p class="location home-text">LOCATION GOES HERE</p>
+            <p class="extra">extra info in here yeah?</p>
+          </address>
+
+          <div class="home-actions">
+            <a href="#rsvp" class="action">
+              Confirm Attendance
+            </a>
+            <label for="palettes" class="sr-only">
+              Choose a color palette
+            </label>
+            <select name="palettes" id="palettes" class="action">
+              <option value="" disabled selected>
+                Choose palette (dev mode)
+              </option>
+              <option value="classic-elegant">Classic Elegant</option>
+              <option value="modern-sage-green">Modern Sage Green</option>
+              <option value="romantic-blush">Romantic Blush</option>
+              <option value="luxury-champagne">Luxury Champagne</option>
+              <option value="white-&-terracotta">White And Terracotta</option>
+              <option value="sage-&-olive">Sage And Olive</option>
+              <option value="champagne-&-slate-blue">
+                Champagne And Slate Blue
+              </option>
+              <option value="terracotta-&-blush">Terracotta And Blush</option>
+              <option value="modern-minimalist">Modern Minimalist</option>
+              <option value="rustic-botanical">Rustic Botanical</option>
+              <option value="moody-luxe">Moody Luxe</option>
+              <option value="sunset-boho">Sunset Boho</option>
+            </select>
+          </div>
+        </div>
+      </section>
+      <section class="countdown" id="countdown" aria-live="polite">
+        <div class="countdown-container">
+          <h2 class="countdown-heading">It's the final countdown!</h2>
+
+          <div class="timer" role="timer" aria-atomic="true">
+            <div class="timer-item">
+              <p class="timer-count">
+                <span id="days"></span>
+              </p>
+              <p class="timer-label">DAYS</p>
+            </div>
+            <div class="timer-item">
+              <p class="timer-count">
+                <span id="hours"></span>
+              </p>
+              <p class="timer-label">HOURS</p>
+            </div>
+            <div class="timer-item">
+              <p class="timer-count">
+                <span id="minutes"></span>
+              </p>
+              <p class="timer-label">MINUTES</p>
+            </div>
+            <div class="timer-item">
+              <p class="timer-count">
+                <span id="seconds"></span>
+              </p>
+              <p class="timer-label">SECONDS</p>
+            </div>
+          </div>
+
+          <blockquote class="countdown-quote">
+            <p>
+              "My favorite part of a deadline is the whooshing sound it makes as
+              it flies right by me."
+            </p>
+          </blockquote>
+
+          <time datetime="2027-06-26" class="countdown-date countdown-text">
+            JUNE 26, 2027
+          </time>
+
+          <address class="countdown-location">
+            <p class="location countdown-text">LOCATION GOES HERE</p>
+            <p class="extra">extra info in here yeah?</p>
+          </address>
+        </div>
+      </section>
+      <section class="timeline" id="timeline">
+        <div class="timeline-container">
+          <h2 class="timeline-header">Wedding Timeline</h2>
+          <p class="timeline-subheader">Program Timetable</p>
+          <hr class="timeline-divider" />
+          <ol class="timeline-list">
+            <li class="timeline-article">
+              <div class="article-icon" aria-hidden="true">
+                <span>:(</span>
+              </div>
+              <div class="timeline-item">
+                <time class="timeline-time" datetime="12:00">
+                  12:00 PM
+                </time>
+                <h3 class="timeline-event">Starting Event</h3>
+                <p class="timeline-details">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Assumenda repellendus laborum veritatis dignissimos dolores
+                  unde!
+                </p>
+              </div>
+            </li>
+            <li class="timeline-article">
+              <div class="article-icon" aria-hidden="true">
+                <span>:|</span>
+              </div>
+              <div class="timeline-item">
+                <time class="timeline-time" datetime="15:00">
+                  3:00 PM
+                </time>
+                <h3 class="timeline-event">Middle Event</h3>
+                <p class="timeline-details">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+                  corporis amet nulla id expedita inventore fugit numquam dicta
+                  eius unde.
+                </p>
+              </div>
+            </li>
+            <li class="timeline-article">
+              <div class="article-icon" aria-hidden="true">
+                <span>:)</span>
+              </div>
+              <div class="timeline-item">
+                <time class="timeline-time" datetime="17:00">
+                  5:00 PM
+                </time>
+                <h3 class="timeline-event">Ending Event</h3>
+                <p class="timeline-details">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quisquam quasi explicabo dolore numquam?
+                </p>
+              </div>
+            </li>
+            <li class="timeline-article">
+              <div class="article-icon" aria-hidden="true">
+                <span>:D</span>
+              </div>
+              <div class="timeline-item">
+                <time class="timeline-time" datetime="21:00">
+                  9:00 PM
+                </time>
+                <h3 class="timeline-event">Main Event</h3>
+                <p class="timeline-details">Inuman time</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+      <section class="event-details" id="event-details">
+        <div class="event-details-container">
+          <h2 class="event-details-heading">Event Details</h2>
+          <hr class="divider" />
+          <div class="event-map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d947.0087911312402!2d-64.82574465775576!3d18.29999999868523!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c051168c4c9f33d%3A0x4b2c4e6907c7bce7!2sLittle%20Saint%20James!5e0!3m2!1sen!2sph!4v1782400311389!5m2!1sen!2sph"
+              style="border: 0"
+              width="100%"
+              height="100%"
+              allowFullScreen=""
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe>
+          </div>
+          <div class="event-map-details">
+            <div class="event-map-logo" aria-hidden="true">
+              <span>:)</span>
+            </div>
+            <address class="event-map-location">
+              <p class="location">LOCATION GOES HERE</p>
+              <p class="extra">extra info in here yeah?</p>
+            </address>
+            <time class="event-map-time" datetime="12:00">
+              12:00 PM
+            </time>
+          </div>
+          <h2 class="event-details-heading">Our Families</h2>
+          <hr class="divider" />
+          <div class="event-families-grid">
+            <article class="event-families-container">
+              <h3>BRIDE'S PARENTS</h3>
+              <div class="event-families">
+                <p class="parent-name">Linux Windows</p>
+                <span class="ampersand">&</span>
+                <p class="parent-name">Apple Android</p>
+              </div>
+            </article>
+            <article class="event-families-container">
+              <h3>GROOM'S PARENTS</h3>
+              <div class="event-families">
+                <p class="parent-name">Samsung Alibaba</p>
+                <span class="ampersand">&</span>
+                <p class="parent-name">Qwen Gemini</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="sponsors" id="sponsors">
+        <div class="sponsors-container">
+          <h2 class="sponsors-heading">Ninong & Ninang</h2>
+          <hr class="divider" />
+          <div class="sponsors-grid">
+            <article class="ninoang-container">
+              <h3>NINONG</h3>
+              <ul class="ninoang-list">
+                <li>Ninong #1</li>
+                <li>Ninong #2</li>
+                <li>Ninong #3</li>
+                <li>Ninong #4</li>
+                <li>Ninong #5</li>
+              </ul>
+            </article>
+            <article class="ninoang-container">
+              <h3>NINANG</h3>
+              <ul class="ninoang-list">
+                <li>Ninang #1</li>
+                <li>Ninang #2</li>
+                <li>Ninang #3</li>
+                <li>Ninang #4</li>
+                <li>Ninang #5</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="entourage" id="entourage">
+        <div class="entourage-container">
+          <h2 class="entourage-heading">Entourage</h2>
+          <hr class="divider" />
+          <div class="entourage-grid">
+            <article class="entourage-card">
+              <h3>Best Man</h3>
+              <ul class="entourage-card-list">
+                <li>Best Asshole</li>
+              </ul>
+            </article>
+
+            <article class="entourage-card">
+              <h3>Maid of honor</h3>
+              <ul class="entourage-card-list">
+                <li>Maidenless</li>
+              </ul>
+            </article>
+
+            <article class="entourage-card">
+              <h3>Groomsmen</h3>
+              <ul class="entourage-card-list">
+                <li>Groomer Expert</li>
+                <li>Groomed by Groomer</li>
+                <li>Groomer Connoisseur</li>
+              </ul>
+            </article>
+
+            <article class="entourage-card">
+              <h3>Bridesmaids</h3>
+              <ul class="entourage-card-list">
+                <li>Self Proclaimed Bridesmaid</li>
+                <li>Totally Real Bridesmaid</li>
+                <li>Divorced Bridesmaid</li>
+              </ul>
+            </article>
+
+            <article class="entourage-card">
+              <h3>Flower Girls</h3>
+              <ul class="entourage-card-list">
+                <li>Poison Ivy</li>
+                <li>Swamp Man</li>
+              </ul>
+            </article>
+
+            <article class="entourage-card">
+              <h3>Ring Bearer</h3>
+              <ul class="entourage-card-list">
+                <li>Smeagol</li>
+              </ul>
+            </article>
+
+            <article class="entourage-card">
+              <h3>Bible Bearer</h3>
+              <ul class="entourage-card-list">
+                <li>Karen</li>
+              </ul>
+            </article>
+
+            <article class="entourage-card">
+              <h3>Coin Bearer</h3>
+              <ul class="entourage-card-list">
+                <li>Two-Face</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="sponsor-grid">
+            <article class="sponsor-card">
+              <h3>Cord Sponsors</h3>
+              <ul class="sponsor-card-list">
+                <li>Cable</li>
+                <li>Wire</li>
+              </ul>
+            </article>
+
+            <article class="sponsor-card">
+              <h3>Veil Sponsors</h3>
+              <ul class="sponsor-card-list">
+                <li>Enikk</li>
+                <li>Satella</li>
+              </ul>
+            </article>
+
+            <article class="sponsor-card">
+              <h3>Candle Sponsors</h3>
+              <ul class="sponsor-card-list">
+                <li>Mr. 3</li>
+                <li>Lumiere</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="gallery" id="gallery">
+        <div class="gallery-container">
+          <h2 class="gallery-heading">Behold, A Carousel!</h2>
+          <hr class="divider" />
+          <div class="carousel">
+            <button class="carousel-btn prev" data-carousel-btn="prev">
+              {"<"}
+            </button>
+            <button class="carousel-btn next" data-carousel-btn="next">
+              {">"}
+            </button>
+            <ul class="slides-list">
+              <li class="slide" data-active>
+                <img src="/images/1.webp" alt="wedding image" loading="lazy" />
+              </li>
+              <li class="slide">
+                <img src="/images/2.webp" alt="wedding image" loading="lazy" />
+              </li>
+              <li class="slide">
+                <img src="/images/3.webp" alt="wedding image" loading="lazy" />
+              </li>
+              <li class="slide">
+                <img src="/images/4.webp" alt="wedding image" loading="lazy" />
+              </li>
+              <li class="slide">
+                <img src="/images/5.webp" alt="wedding image" loading="lazy" />
+              </li>
+              <li class="slide">
+                <img src="/images/6.webp" alt="wedding image" loading="lazy" />
+              </li>
+              <li class="slide">
+                <img src="/images/7.webp" alt="wedding image" loading="lazy" />
+              </li>
+              <li class="slide">
+                <img src="/images/8.webp" alt="wedding image" loading="lazy" />
+              </li>
+              <li class="slide">
+                <img src="/images/9.webp" alt="wedding image" loading="lazy" />
+              </li>
+              <li class="slide">
+                <img src="/images/10.webp" alt="wedding image" loading="lazy" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="love-messages" id="love-messages">
+        <div class="love-messages-container">
+          <h2 class="love-messages-heading">Send A Message To The Lovebirds</h2>
+          <hr class="divider" />
+          <div class="form-container">
+            <form
+              onsubmit="
+                event.preventDefault();
+                alert('Chill. Design muna before backend feats');
+                this.reset();
+              "
+            >
+              <fieldset>
+                <div class="field-container">
+                  <label for="sender"> Enter your name/nickname/alias: </label>
+                  <input type="text" id="sender" name="sender" />
+                </div>
+
+                <div class="field-container">
+                  <label for="message"> Enter message: </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Congrats. Happy for you... tch"
+                  ></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="rsvp" id="rsvp">
+        <div class="rsvp-container">
+          <h2 class="rsvp-heading">Confirm Your Attendance</h2>
+          <p class="rsvp-subheader">
+            kindly confirm your attendance by may 13, 2027
+          </p>
+          <hr class="divider" />
+          <div class="form-container">
+            <form
+              onsubmit="
+                event.preventDefault();
+                alert('Like I said, chill. Design muna before backend feats');
+                this.reset();
+              "
+            >
+              <fieldset>
+                <div class="field-container">
+                  <label for="response"> Enter your first name: </label>
+                  <input type="text" name="firstname" id="firstname" required />
+                </div>
+                <div class="field-container">
+                  <label for="response"> Enter your last name: </label>
+                  <input type="text" name="lastname" id="lastname" required />
+                </div>
+                <button type="submit">Confirm Attendance</button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="attire-motif" id="attire-motif">
+        <div class="attire-motif-container">
+          <h2 class="attire-motif-heading">Attire & Motif</h2>
+          <hr class="divider" />
+
+          <div class="details-container">
+            <div class="attire-container">
+              <h3 class="attire-heading detail-text">Dress Code</h3>
+              <p class="attire">Clown Outfit/Cosplay</p>
+            </div>
+            <p class="detail-text">please kindly follow the palette below</p>
+            <div class="motif-container">
+              <div class="motif-item">
+                <div class="motif motif-1"></div>
+                <p class="motif-label">RED</p>
+              </div>
+              <div class="motif-item">
+                <div class="motif motif-2"></div>
+                <p class="motif-label">YELLOW</p>
+              </div>
+              <div class="motif-item">
+                <div class="motif motif-3"></div>
+                <p class="motif-label">GREEN</p>
+              </div>
+              <div class="motif-item">
+                <div class="motif motif-4"></div>
+                <p class="motif-label">PURPLE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="gift-guide" id="gift-guide">
+        <div class="gift-guide-container">
+          <h2 class="gift-guide-heading">Gift Guide</h2>
+          <hr class="divider" />
+          <blockquote class="gift-guide-quote">
+            <p>
+              "They say that love is more important than money, but have you
+              ever tried to pay your bills with a hug? Fuckin hell yeah give
+              money if you want."
+            </p>
+          </blockquote>
+
+          <div class="guides-container">
+            <div class="guide">
+              <h3>GCASH</h3>
+              <p>09123456789</p>
+            </div>
+            <div class="guide">
+              <h3>BDO</h3>
+              <p>000123456789</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="extra-info" id="extra-info">
+        <div class="extra-info-container">
+          <h2 class="extra-info-heading">Additional Info</h2>
+          <hr class="divider" />
+
+          <div class="info-containers">
+            <div class="info-container">
+              <h3 class="info-heading">DRESS CODE</h3>
+              <p class="info">Clown Attire/Cosplay</p>
+            </div>
+
+            <div class="info-container">
+              <h3 class="info-heading">PARKING</h3>
+              <p class="info">Nah, use the goddamn public transport</p>
+            </div>
+
+            <div class="info-container">
+              <h3 class="info-heading">CONTACT</h3>
+              <p class="info">For inquiries, contact: 09123456789</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <p class="footer-heading">Jilver Ryan Tim & Sunshine Gatmen</p>
+        <time datetime="2027-06-26" class="footer-date">
+          June 26, 2027
+        </time>
+      </footer>
+    </div>
+  );
+};
