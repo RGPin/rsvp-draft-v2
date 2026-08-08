@@ -1,12 +1,14 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-button, 
-input[type="button"], 
-input[type="submit"], 
+button,
+input[type="button"],
+input[type="submit"],
 input[type="reset"] {
   background: transparent;
   color: inherit;
@@ -30,22 +32,22 @@ textarea {
   /* Remove default borders and backgrounds */
   border: none;
   background-color: transparent;
-  
+
   /* Reset spacing and font properties */
   padding: 0;
   margin: 0;
   font: inherit;
   color: inherit;
-  
+
   /* Force sizing to include padding and border if added later */
   box-sizing: border-box;
-  
+
   /* Control resizing behavior */
   resize: vertical; /* Options: vertical, horizontal, both, or none */
-  
+
   /* Prevent scrollbars from appearing when content doesn't overflow */
   overflow: auto;
-  
+
   /* Remove the focus outline (Make sure to replace with a custom style!) */
   outline: none;
 }
@@ -81,19 +83,21 @@ select {
   border-radius: 0;
   padding: 0;
   margin: 0;
-  
+
   /* Forces form element to use your body text styles */
   font: inherit;
   color: inherit;
   cursor: pointer;
 }
 
-
 li {
   list-style: none;
 }
 
-a, a:visited, a:hover, a:active {
+a,
+a:visited,
+a:hover,
+a:active {
   color: inherit;
   text-decoration: none;
 }
@@ -104,8 +108,6 @@ powder blue: #B0E0E6
 beige: #F5F5DC
 taupe brown: #483C32
 offwhite: #FAF9F6 */
-
-
 
 /* Classic elegant: */
 :root {
@@ -122,12 +124,12 @@ offwhite: #FAF9F6 */
   --space-xxxl: 128px;
 
   --text-xxs: 0.5rem;
-  --text-xs: 0.75rem;   /* 12px - Captions / Small labels */
-  --text-sm: 0.875rem;  /* 14px - Secondary body / Table text */
-  --text-base: 1rem;    /* 16px - Standard body text */
-  --text-md: 1.25rem;   /* 20px - H3 / Subheadings */
-  --text-lg: 1.5rem;    /* 24px - H2 / Section titles */
-  --text-xl: 2.25rem;   /* 36px - H1 / Page titles */
+  --text-xs: 0.75rem; /* 12px - Captions / Small labels */
+  --text-sm: 0.875rem; /* 14px - Secondary body / Table text */
+  --text-base: 1rem; /* 16px - Standard body text */
+  --text-md: 1.25rem; /* 20px - H3 / Subheadings */
+  --text-lg: 1.5rem; /* 24px - H2 / Section titles */
+  --text-xl: 2.25rem; /* 36px - H1 / Page titles */
 
   --heading-font: "Playfair Display", serif;
   --body-font: "Inter", sans-serif;
@@ -141,26 +143,23 @@ offwhite: #FAF9F6 */
   --color-primary: #C08497;
   --color-primary-hover: #A96B80; */
 
-
   /* The foundational canvas */
-  --color-bg: #FAF9F6;           /* Off-white: clean, soft background */
-  --color-surface: #F5F5DC;      /* Beige: subtle lift for cards/containers */
-  --color-border: #B0E0E6;       /* Powder blue: soft, non-intrusive divider lines */
+  --color-bg: #faf9f6; /* Off-white: clean, soft background */
+  --color-surface: #f5f5dc; /* Beige: subtle lift for cards/containers */
+  --color-border: #b0e0e6; /* Powder blue: soft, non-intrusive divider lines */
 
   /* Text & Typography (High contrast) */
-  --color-text-main: #191970;    /* Midnight blue: deep, highly legible body/headers */
-  --color-text-muted: #483C32;   /* Taupe brown: softer tone for captions/secondary text */
+  --color-text-main: #191970; /* Midnight blue: deep, highly legible body/headers */
+  --color-text-muted: #483c32; /* Taupe brown: softer tone for captions/secondary text */
 
   /* Actions & Branding */
-  --color-primary: #5A86AD;      /* Dusty blue: beautiful, clear accent for buttons/links */
-  --color-primary-hover: #191970;/* Midnight blue: darkens significantly on hover for clear feedback */
+  --color-primary: #5a86ad; /* Dusty blue: beautiful, clear accent for buttons/links */
+  --color-primary-hover: #191970; /* Midnight blue: darkens significantly on hover for clear feedback */
 
-
-   /* Radii */
+  /* Radii */
   --radius-sm: 6px;
   --radius-md: 12px;
 }
-
 
 html {
   scroll-behavior: smooth;
@@ -228,7 +227,6 @@ body {
 
 section {
   padding: var(--space-lg) var(--space-lg) var(--space-xxxl) var(--space-lg);
-  
 }
 
 .home {
@@ -272,7 +270,7 @@ section {
   }
 
   .home-location {
-    margin-top: calc(var(--space-lg) * -1)
+    margin-top: calc(var(--space-lg) * -1);
   }
 
   .location {
@@ -319,7 +317,7 @@ section {
 .countdown {
   background-color: var(--color-surface);
   text-align: center;
-  
+
   .countdown-container {
     display: flex;
     flex-direction: column;
@@ -371,7 +369,7 @@ section {
   }
 
   .countdown-location {
-    margin-top: calc(var(--space-xxl) * -1)
+    margin-top: calc(var(--space-xxl) * -1);
   }
 
   .extra {
@@ -643,7 +641,8 @@ section {
     margin: var(--space-lg) 0;
   }
 
-  .entourage-grid, .sponsor-grid {
+  .entourage-grid,
+  .sponsor-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--space-md);
@@ -654,7 +653,8 @@ section {
     letter-spacing: 1px;
   }
 
-  .entourage-card, .sponsor-card {
+  .entourage-card,
+  .sponsor-card {
     display: flex;
     flex-direction: column;
     gap: var(--space-md);
@@ -664,7 +664,8 @@ section {
     border-radius: var(--radius-md);
   }
 
-  .entourage-card-list, .sponsor-card-list {
+  .entourage-card-list,
+  .sponsor-card-list {
     display: flex;
     flex-direction: column;
     gap: var(--space-xs);
@@ -712,7 +713,7 @@ section {
 
   .carousel-btn {
     position: absolute;
-    background: none; 
+    background: none;
     font-size: var(--text-base);
     z-index: 2;
     top: 50%;
@@ -806,7 +807,8 @@ section {
     color: var(--color-text-muted);
   }
 
-  input, textarea {
+  input,
+  textarea {
     font-size: var(--text-base);
     font-family: var(--body-font);
     border-radius: var(--radius-sm);
@@ -885,7 +887,6 @@ section {
     border: 2px solid var(--color-primary);
     color: var(--color-text-main);
   }
-
 
   button {
     border: 2px solid var(--color-border);
@@ -970,19 +971,19 @@ section {
   }
 
   .motif-1 {
-    background-color: #FF0000;
+    background-color: #ff0000;
   }
 
   .motif-2 {
-    background-color: #FFFF00;
+    background-color: #ffff00;
   }
 
   .motif-3 {
-    background-color: #00C800;
+    background-color: #00c800;
   }
 
   .motif-4 {
-    background-color: #7F007F;
+    background-color: #7f007f;
   }
 }
 

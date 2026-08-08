@@ -1,5 +1,6 @@
 import { Context } from "hono";
 import { Main } from "../components/Main/Main";
+import { TestResponse } from "../components/Response/Invited";
 
 export const getMainPage = (c: Context) => {
   c.set(
@@ -13,6 +14,7 @@ export const getMainPage = (c: Context) => {
       />
       <link rel="stylesheet" href="/index.css" />
       <script src="/js/index.js" defer type="module"></script>
+      <script src="/js/main.js" defer></script>
     </>,
   );
   return c.render(
@@ -22,8 +24,13 @@ export const getMainPage = (c: Context) => {
   );
 };
 
-export const postFormResponse = (c: Context) => {
-  return c.text("lalala");
+export const postFormResponse = async (c: Context) => {
+  console.log("postFormResponse ran");
+  return await c.html(
+    <>
+      <TestResponse />
+    </>,
+  );
 };
 
 export const postGuestResponse = (c: Context) => {

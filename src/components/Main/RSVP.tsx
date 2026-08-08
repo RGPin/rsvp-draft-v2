@@ -4,17 +4,11 @@ export const RSVP = () => {
       <div class="rsvp-container">
         <h2 class="rsvp-heading">Confirm Your Attendance</h2>
         <p class="rsvp-subheader">
-          kindly confirm your attendance by may 13, 2027
+          kindly confirm your attendance by May 13, 2027
         </p>
         <hr class="divider" />
         <div class="form-container">
-          <form
-            onsubmit="
-                event.preventDefault();
-                alert('Like I said, chill. Design muna before backend feats');
-                this.reset();
-              "
-          >
+          <form id="rsvp-form">
             <fieldset>
               <div class="field-container">
                 <label for="response"> Enter your first name: </label>
@@ -28,6 +22,7 @@ export const RSVP = () => {
             </fieldset>
           </form>
         </div>
+        <div id="rsvp-result" aria-live="polite"></div>
       </div>
     </section>
   );
