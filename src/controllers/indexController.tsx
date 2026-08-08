@@ -21,3 +21,23 @@ export const getMainPage = (c: Context) => {
     </>,
   );
 };
+
+export const postFormResponse = (c: Context) => {
+  return c.text("lalala");
+};
+
+export const postGuestResponse = (c: Context) => {
+  return c.text("lalala");
+};
+
+export const getSecretPage = (c: Context) => {
+  return c.text("lalala");
+};
+
+export const postAddGuest = (c: Context) => {
+  return c.text("lalala");
+};
+
+export const deleteGuest = (c: Context) => {
+  return c.text("lalala");
+};
