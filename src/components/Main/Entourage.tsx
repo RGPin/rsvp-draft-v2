@@ -25,6 +25,11 @@ export const Entourage = () => {
               <li>Groomer Expert</li>
               <li>Groomed by Groomer</li>
               <li>Groomer Connoisseur</li>
+              <li>Groomed Groomer</li>
+              <li>Groomer of Groomed Groomer</li>
+              <li>Original Groomer (OG)</li>
+              <li>Goone—, Groomer</li>
+              <li>GOAT, Groomer Of All Time</li>
             </ul>
           </article>
 

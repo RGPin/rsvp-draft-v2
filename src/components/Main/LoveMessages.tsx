@@ -8,7 +8,7 @@ export const LoveMessage = () => {
           <form
             onsubmit="
                 event.preventDefault();
-                alert('Chill. Design muna before backend feats');
+                alert('Chill. Ung RSVP muna unahin natin.');
                 this.reset();
               "
           >

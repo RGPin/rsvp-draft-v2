@@ -13,14 +13,7 @@ export const GiftGuide = () => {
         </blockquote>
 
         <div class="guides-container">
-          <div class="guide">
-            <h3>GCASH</h3>
-            <p>09123456789</p>
-          </div>
-          <div class="guide">
-            <h3>BDO</h3>
-            <p>000123456789</p>
-          </div>
+          <img src="/qr.jpg" />
         </div>
       </div>
     </section>

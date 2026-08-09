@@ -28,9 +28,9 @@ export const Main = () => {
       <Entourage />
       <Gallery />
       <LoveMessage />
-      <RSVP />
-      <AttireMotif />
       <GiftGuide />
+      <AttireMotif />
+      <RSVP />
       <ExtraInfo />
       <Footer />
     </div>
