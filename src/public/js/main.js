@@ -4,9 +4,12 @@ const rsvpForm = document.querySelector("#rsvp-form");
 rsvpForm.addEventListener("submit", async (e) => {
   e.preventDefault();
 
+  const formData = new FormData(rsvpForm);
+
   try {
     const response = await fetch(`/rsvp`, {
       method: "POST",
+      body: formData,
     });
 
     if (!response.ok) {

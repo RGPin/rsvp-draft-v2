@@ -1,34 +1,44 @@
 import { neon } from "@neondatabase/serverless";
 
-export const getAll = (dbUrl: string) => {
-  const sql = neon(dbUrl);
-  return sql`SELECT * FROM invites`;
+type Invite = {
+  id: number;
+  guest_name: string;
+  responded: boolean;
+  attending: boolean | null;
+  responded_at: Date | null;
+  token: string;
 };
 
-export const getAllInvites = (dbUrl: string) => {
+export const getAllInvites = async (dbUrl: string): Promise<Invite[]> => {
   const sql = neon(dbUrl);
-  return sql`
-    SELECT guest_name, responded, attending, responded_at, token 
+  return (await sql`
+    SELECT *
     FROM invites
     ORDER BY guest_name ASC
-    `;
+    `) as Invite[];
 };
 
-export const checkInvites = async (dbUrl: string, personName: string) => {
+export const checkInvites = async (
+  dbUrl: string,
+  personName: string,
+): Promise<Pick<Invite, "guest_name" | "token"> | null> => {
   const sql = neon(dbUrl);
   const rows = await sql`
     SELECT guest_name, token
     FROM invites
     WHERE LOWER(guest_name) = LOWER(${personName})
     `;
-  return rows[0] ?? null;
+  return (rows[0] ?? null) as Pick<Invite, "guest_name" | "token"> | null;
 };
 
 export const updateGuestResponse = async (
   dbUrl: string,
   token: string,
   response: boolean,
-) => {
+): Promise<Pick<
+  Invite,
+  "guest_name" | "token" | "attending" | "responded_at"
+> | null> => {
   const sql = neon(dbUrl);
   const rows = await sql`
     UPDATE invites
@@ -38,10 +48,16 @@ export const updateGuestResponse = async (
     WHERE token = ${token}
     RETURNING guest_name, token, attending, responded_at
   `;
-  return rows[0] ?? null;
+  return (rows[0] ?? null) as Pick<
+    Invite,
+    "guest_name" | "token" | "attending" | "responded_at"
+  > | null;
 };
 
-export const addNewGuest = async (dbUrl: string, guestName: string) => {
+export const addNewGuest = async (
+  dbUrl: string,
+  guestName: string,
+): Promise<Pick<Invite, "guest_name" | "token"> | null> => {
   const sql = neon(dbUrl);
   const rows = await sql`
     INSERT INTO invites (guest_name)
@@ -49,10 +65,13 @@ export const addNewGuest = async (dbUrl: string, guestName: string) => {
     RETURNING guest_name, token
   `;
 
-  return rows[0] ?? null;
+  return (rows[0] ?? null) as Pick<Invite, "guest_name" | "token"> | null;
 };
 
-export const removeGuest = async (dbUrl: string, token: string) => {
+export const removeGuest = async (
+  dbUrl: string,
+  token: string,
+): Promise<Pick<Invite, "guest_name" | "token"> | null> => {
   const sql = neon(dbUrl);
   const rows = await sql`
     DELETE FROM invites
@@ -60,5 +79,5 @@ export const removeGuest = async (dbUrl: string, token: string) => {
     RETURNING guest_name, token
   `;
 
-  return rows[0] ?? null;
+  return (rows[0] ?? null) as Pick<Invite, "guest_name" | "token"> | null;
 };

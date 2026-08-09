@@ -12,11 +12,11 @@ export const RSVP = () => {
             <fieldset>
               <div class="field-container">
                 <label for="response"> Enter your first name: </label>
-                <input type="text" name="firstname" id="firstname" required />
+                <input type="text" name="firstname" id="firstname" />
               </div>
               <div class="field-container">
                 <label for="response"> Enter your last name: </label>
-                <input type="text" name="lastname" id="lastname" required />
+                <input type="text" name="lastname" id="lastname" />
               </div>
               <button type="submit">Confirm Attendance</button>
             </fieldset>

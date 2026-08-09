@@ -1,6 +1,10 @@
 import { Context } from "hono";
 import { Main } from "../components/Main/Main";
-import { TestResponse } from "../components/Response/Invited";
+import { Invited } from "../components/Response/Invited";
+import z from "zod";
+import { Error } from "../components/Response/Error";
+import { checkInvites } from "../db/queries";
+import { Uninvited } from "../components/Response/Uninvited";
 
 export const getMainPage = (c: Context) => {
   c.set(
@@ -24,11 +28,51 @@ export const getMainPage = (c: Context) => {
   );
 };
 
+const rsvpInputSchema = z.object({
+  firstname: z
+    .string()
+    .trim()
+    .min(1, "First name is required")
+    .max(50, "First name must be 50 characters or less"),
+
+  lastname: z
+    .string()
+    .trim()
+    .min(1, "Last name is required")
+    .max(50, "Last name must be 50 characters or less"),
+});
+
 export const postFormResponse = async (c: Context) => {
-  console.log("postFormResponse ran");
-  return await c.html(
+  const body = await c.req.parseBody();
+
+  const formData = rsvpInputSchema.safeParse(body);
+
+  const firstName = formData.data?.firstname;
+  const lastName = formData.data?.lastname;
+  const fullName = `${firstName} ${lastName}`;
+
+  if (!formData.success) {
+    const fieldErrors = z.flattenError(formData.error).fieldErrors;
+    return c.html(
+      <>
+        <Error errors={fieldErrors} />
+      </>,
+    );
+  }
+
+  const guest = await checkInvites(c.env.DATABASE_URL, fullName);
+
+  if (!guest?.guest_name) {
+    return c.html(
+      <>
+        <Uninvited name={fullName} />
+      </>,
+    );
+  }
+
+  return c.html(
     <>
-      <TestResponse />
+      <Invited name={guest.guest_name} />
     </>,
   );
 };
