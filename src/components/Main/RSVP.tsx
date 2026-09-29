@@ -18,7 +18,9 @@ export const RSVP = () => {
                 <label for="response"> Enter your last name: </label>
                 <input type="text" name="lastname" id="lastname" />
               </div>
-              <button type="submit">Confirm Attendance</button>
+              <button type="submit" id="rsvp-btn">
+                Confirm Attendance
+              </button>
             </fieldset>
           </form>
         </div>

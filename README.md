@@ -20,8 +20,8 @@ Pass the `CloudflareBindings` as generics when instantiating `Hono`:
 const app = new Hono<{ Bindings: CloudflareBindings }>();
 ```
 
-moody luxe, but with midnight blue, navy blue, dusty blue
+moody luxe, but with midnight blue, navy blue, dusty blue maybe done
 
-navigation bar, centralize the texts
+navigation bar, centralize the texts done
 
-modern minimalist for font
+modern minimalist for font done

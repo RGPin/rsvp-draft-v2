@@ -1,5 +1,6 @@
 import { Context, Hono } from "hono";
 import indexRouter from "./routes/indexRouter";
+import secretRouter from "./routes/secretRouter";
 import { jsxRenderer } from "hono/jsx-renderer";
 
 const app = new Hono();
@@ -26,5 +27,6 @@ app.use(
 );
 
 app.route("/", indexRouter);
+app.route("/supersecretstuff67", secretRouter);
 
 export default app;

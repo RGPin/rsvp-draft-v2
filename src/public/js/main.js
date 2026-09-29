@@ -1,8 +1,11 @@
 const rsvpResultContainer = document.querySelector("#rsvp-result");
 const rsvpForm = document.querySelector("#rsvp-form");
+const rsvpBtn = document.querySelector("#rsvp-btn");
 
 rsvpForm.addEventListener("submit", async (e) => {
   e.preventDefault();
+  rsvpBtn.disabled = true;
+  rsvpBtn.textContent = "Loading...";
 
   const formData = new FormData(rsvpForm);
 
@@ -20,5 +23,8 @@ rsvpForm.addEventListener("submit", async (e) => {
     rsvpResultContainer.innerHTML = htmlData;
   } catch (error) {
     console.error(error);
+  } finally {
+    rsvpBtn.disabled = false;
+    rsvpBtn.textContent = "Confirm Attendance";
   }
 });
