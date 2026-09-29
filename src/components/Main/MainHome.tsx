@@ -57,6 +57,7 @@ export const MainHome = () => {
             <option value="rustic-botanical">Rustic Botanical</option>
             <option value="moody-luxe">Moody Luxe</option>
             <option value="sunset-boho">Sunset Boho</option>
+            <option value="midnight-luxe-test">Midnight Luxe Test</option>
           </select>
         </div>
       </div>

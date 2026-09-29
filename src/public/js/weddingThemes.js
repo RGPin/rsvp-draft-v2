@@ -131,4 +131,15 @@ export const weddingThemes = {
     "--color-primary": "#C86F4E",
     "--color-primary-hover": "#A8583A",
   },
+  "midnight-luxe-test": {
+    "--heading-font": '"Cormorant Garamond", serif',
+    "--body-font": '"Manrope", sans-serif',
+    "--color-bg": "#0B1220",
+    "--color-surface": "#121D30",
+    "--color-text-main": "#E8EDF5",
+    "--color-text-muted": "#8E9DB2",
+    "--color-border": "#263750",
+    "--color-primary": "#7893B2",
+    "--color-primary-hover": "#91A9C4",
+  },
 };
