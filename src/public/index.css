@@ -131,8 +131,8 @@ offwhite: #FAF9F6 */
   --text-lg: 1.5rem; /* 24px - H2 / Section titles */
   --text-xl: 2.25rem; /* 36px - H1 / Page titles */
 
-  --heading-font: "Playfair Display", serif;
-  --body-font: "Inter", sans-serif;
+  --heading-font: "Cormorant Garamond", serif;
+  --body-font: "Manrope", sans-serif;
   /* --color-bg: #FAF7F2;
   --color-surface: #FFFFFF;
 
@@ -144,17 +144,17 @@ offwhite: #FAF9F6 */
   --color-primary-hover: #A96B80; */
 
   /* The foundational canvas */
-  --color-bg: #faf9f6; /* Off-white: clean, soft background */
-  --color-surface: #f5f5dc; /* Beige: subtle lift for cards/containers */
-  --color-border: #b0e0e6; /* Powder blue: soft, non-intrusive divider lines */
+  --color-bg: #0b1220; /* Off-white: clean, soft background */
+  --color-surface: #121d30; /* Beige: subtle lift for cards/containers */
+  --color-border: #263750; /* Powder blue: soft, non-intrusive divider lines */
 
   /* Text & Typography (High contrast) */
-  --color-text-main: #191970; /* Midnight blue: deep, highly legible body/headers */
-  --color-text-muted: #483c32; /* Taupe brown: softer tone for captions/secondary text */
+  --color-text-main: #e8edf5; /* Midnight blue: deep, highly legible body/headers */
+  --color-text-muted: #8e9db2; /* Taupe brown: softer tone for captions/secondary text */
 
   /* Actions & Branding */
-  --color-primary: #5a86ad; /* Dusty blue: beautiful, clear accent for buttons/links */
-  --color-primary-hover: #191970; /* Midnight blue: darkens significantly on hover for clear feedback */
+  --color-primary: #7893b2; /* Dusty blue: beautiful, clear accent for buttons/links */
+  --color-primary-hover: #91a9c4; /* Midnight blue: darkens significantly on hover for clear feedback */
 
   /* Radii */
   --radius-sm: 6px;
