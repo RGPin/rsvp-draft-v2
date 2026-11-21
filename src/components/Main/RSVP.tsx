@@ -9,7 +9,7 @@ export const RSVP = () => {
         <hr class="divider" />
         <div class="form-container">
           <form id="rsvp-form">
-            <fieldset>
+            <fieldset id="rsvp-fieldset">
               <div class="field-container">
                 <label for="response"> Enter your first name: </label>
                 <input type="text" name="firstname" id="firstname" />

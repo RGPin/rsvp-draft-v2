@@ -3,5 +3,5 @@ type PropType = {
 };
 
 export const Uninvited = ({ name }: PropType) => {
-  return <p className="rsvp-response">No, we do not want you, {name}, here</p>;
+  return <p className="rsvp-response">The name, {name}, is not on the list.</p>;
 };

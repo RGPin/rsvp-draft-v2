@@ -12,6 +12,28 @@ export const Invited = ({ name }: PropType) => {
     );
   }
   return (
-    <p className="rsvp-response">Yes, your presence is appreciated {name}</p>
+    <>
+      <p className="rsvp-response">Please confirm your attendance:</p>
+      <form id="response-form">
+        <fieldset>
+          <input
+            type="radio"
+            name="guest-response"
+            value="accept"
+            id="accept"
+            checked
+          />
+          <label for="accept">Accept Invitation</label>
+          <input
+            type="radio"
+            name="guest-response"
+            value="decline"
+            id="decline"
+          />
+          <label for="decline">Decline Invitation</label>
+        </fieldset>
+        <button>Submit</button>
+      </form>
+    </>
   );
 };
